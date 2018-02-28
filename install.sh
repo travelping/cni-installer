@@ -15,3 +15,7 @@ for f in $(ls $CONF_TEMPLATE_DIR) ; do
 	cat  $CONF_DIR/$f
 	echo -e "###############"
 done
+
+while [ "$1" == "sleep" ] ; do
+	sleep 1h
+done

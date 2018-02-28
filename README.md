@@ -79,3 +79,11 @@ Installing multus
 }
 ###############
 ```
+
+
+## Options
+
+### Infinite sleep
+
+If you pass `sleep` as argument to the container, it will go to infinite sleep
+after execution.

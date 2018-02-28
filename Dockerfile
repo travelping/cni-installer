@@ -27,4 +27,4 @@ RUN	apk update && apk add gettext
 RUN	mkdir -p $CONF_TEMPLATE_DIR
 COPY	--from=build-env $PLUGIN_DIR/* $PLUGIN_DIR/
 COPY	install.sh /
-CMD	["sh", "/install.sh"]
+ENTRYPOINT	["sh", "/install.sh"]
