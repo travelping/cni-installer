@@ -19,6 +19,12 @@ FROM alpine:3.7
 ARG	PLUGIN_DIR
 ENV	PLUGIN_DIR=$PLUGIN_DIR
 ENV	INSTALL_DIR=/opt/cni/bin/
+ENV	CONF_DIR=/etc/cni/net.d/
+ENV	CONF_TEMPLATE_DIR=/config/
+
+RUN	apk update && apk add gettext
+
+RUN	mkdir -p $CONF_TEMPLATE_DIR
 COPY	--from=build-env $PLUGIN_DIR/* $PLUGIN_DIR/
 COPY	install.sh /
 CMD	["sh", "/install.sh"]
