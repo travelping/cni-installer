@@ -6,24 +6,23 @@ A docker image to install [CNI](https://github.com/containernetworking/cni) plug
 
 The following plugins are available:
 
-- [Standard CNI plugins](https://github.com/containernetworking/plugins) v0.7.0
+- [Standard CNI plugins](https://github.com/containernetworking/plugins) v0.8.1
+  - bandwidth
   - bridge
   - dhcp
+  - firewall
   - flannel
-  - host
-  - device
-  - host
-  - local
+  - host-device
+  - host-local
   - ipvlan
   - loopback
   - macvlan
   - portmap
   - ptp
-  - sample
+  - sbr
+  - static
   - tuning
   - vlan
-- [MULTUS](https://github.com/Intel-Corp/multus-cni) CNI plugin
-  - multus
 
 ## Install
 
