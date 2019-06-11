@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: cni-installer
+  namespace: kube-system
+  labels:
+    app: cni-installer
+spec:
+  selector:
+    matchLabels:
+      app: cni-installer
+  template:
+    metadata:
+      labels:
+        app: cni-installer
+    spec:
+      terminationGracePeriodSeconds: 0
+      tolerations:
+      - key: node.kubernetes.io/not-ready
+        effect: NoSchedule
+      containers:
+      - name: cni-installer
+        image: travelping/cni-installer:1.1.0
+        args: ["sleep"]
+        volumeMounts:
+        - name: bindir
+          mountPath: /opt/cni/bin
+      volumes:
+      - name: bindir
+        hostPath:
+          path: /opt/cni/bin

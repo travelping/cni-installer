@@ -29,6 +29,9 @@ The following plugins are available:
 The container supports the installation of CNI plugin binaries as well as a
 creation of CNI configuration files.
 
+You can deploy the intaller in Kubernetes via DaemonSet using the declaration
+in `cni-installer-daemonset.yaml`.
+
 ### Plugins
 
 When the container is started, CNI plugins are installed to the directory
