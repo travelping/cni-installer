@@ -6,7 +6,7 @@ A docker image to install [CNI](https://github.com/containernetworking/cni) plug
 
 The following plugins are available:
 
-- [Standard CNI plugins](https://github.com/containernetworking/plugins) v0.8.1
+- [Standard CNI plugins](https://github.com/containernetworking/plugins) v0.8.3
   - bandwidth
   - bridge
   - dhcp
