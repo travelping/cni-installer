@@ -8,7 +8,7 @@ ARG	PLUGIN_DIR
 RUN 	apk update && apk add bash curl
 RUN	mkdir -p $PLUGIN_DIR
 ENV	CGO_ENABLED=0
-RUN	curl -sL https://github.com/containernetworking/plugins/releases/download/v0.8.1/cni-plugins-linux-amd64-v0.8.1.tgz | tar xzvC $PLUGIN_DIR
+RUN	curl -sL https://github.com/containernetworking/plugins/releases/download/v0.8.3/cni-plugins-linux-amd64-v0.8.3.tgz | tar xzvC $PLUGIN_DIR
 
 # -- runtime container --
 
